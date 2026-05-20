@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Edukasi — RiverWatch</title>
+
+<!-- ═══ FONT ═══ -->
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+
+<!-- ═══ CDN ═══ -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"/>
+<link rel="stylesheet" href="css/education.css">
+<link rel="stylesheet" href="css/components/global.css">
+<link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"
+    />
+
+</head>
+<body>
+
+<!-- ═══ NAVBAR ═══ -->
+<div id="navbar"></div>
+
+<!-- ════════════════════════════════════════
+     HERO HALAMAN EDUKASI
+════════════════════════════════════════ -->
+<section class="edu-hero">
+  <div class="edu-hero-grid"></div>
+  <div class="edu-hero-glow"></div>
+  <div class="edu-hero-content">
+    <div class="edu-hero-badge">
+      <div class="edu-hero-badge-dot"></div>
+      Pusat Edukasi Lingkungan
+    </div>
+    <!-- Ubah judul hero di sini -->
+    <h1 class="edu-hero-title">
+      Pelajari, Pahami,<br>dan <span class="mint">Bertindak.</span>
+    </h1>
+    <!-- Ubah subjudul hero di sini -->
+    <p class="edu-hero-sub">
+      Kumpulan edukasi interaktif tentang kualitas air sungai, pencemaran, dan cara nyata yang bisa kamu lakukan sekarang juga.
+    </p>
+    <!-- Tab navigasi cepat -->
+    <div class="edu-hero-tabs">
+      <a class="edu-htab on" href="#fotoSection"><i class="bi bi-camera-fill"></i> Galeri Dampak</a>
+      <a class="edu-htab" href="#beforeAfter"><i class="bi bi-arrow-left-right"></i> Before/After</a>
+      <a class="edu-htab" href="#calculator"><i class="bi bi-calculator-fill"></i> Kalkulator</a>
+      <a class="edu-htab" href="#articles"><i class="bi bi-newspaper"></i> Artikel</a>
+      <a class="edu-htab" href="#quiz"><i class="bi bi-patch-question-fill"></i> Quiz</a>
+      <a class="edu-htab" href="#certificate"><i class="bi bi-award-fill"></i> Sertifikat</a>
+    </div>
+  </div>
+</section>
+
+<div class="edu-divider"></div>
+
+<!-- ════════════════════════════════════════
+     SECTION FOTO + TEKS — BLOK 1
+     Foto di kiri, teks di kanan
+════════════════════════════════════════ -->
+<section class="photo-text-section edu-section" id="fotoSection">
+  <div class="edu-wrap">
+    <div class="photo-text-row reveal">
+
+      <!-- ── FOTO KIRI ──
+           Ganti <div class="pt-photo-placeholder"> dengan <img src="..." alt="...">
+           untuk menampilkan foto asli -->
+      <div class="pt-photo-wrap reveal">
+        <div class="pt-photo">
+          <!-- GANTI INI DENGAN FOTO ASLI:
+               <img src="assets/foto-ciliwung.jpg" alt="Sungai Ciliwung tercemar"> -->
+          <div class="pt-photo-placeholder" style="background:linear-gradient(135deg,#1a0505,#3a1010)">
+            <img src="assets/images/sungai_citarum.jpg" alt="">
+          </div>
+        </div>
+        <!-- Badge mengambang di atas foto -->
+        <div class="pt-photo-badge">
+          <div class="pt-badge-dot" style="background:var(--red)"></div>
+          <div>
+            <div class="pt-badge-text">Status: Kritis</div>
+            <div class="pt-badge-sub">pH 4.8 — Sungai Citarum</div>
+          </div>
+        </div>
+        <!-- Angka mengambang di pojok -->
+        <div class="pt-photo-stat">
+          <span class="pt-photo-stat-num">91</span>
+          <span class="pt-photo-stat-lbl">Skor cemar</span>
+        </div>
+      </div>
+
+      <!-- ── TEKS KANAN ── -->
+      <div class="pt-content reveal reveal-d2">
+        <div class="pt-number">// 01 — REALITA</div>
+        <!-- Ubah judul di sini -->
+        <h2 class="pt-title">Sungai Citarum,<br>Salah Satu yang <span class="accent">Paling Tercemar</span> di Dunia</h2>
+        <!-- Ubah teks di sini -->
+        <p class="pt-body">
+          Sungai Citarum di Jawa Barat menampung limbah dari ribuan pabrik tekstil dan jutaan penduduk. Air yang seharusnya jernih berubah menjadi cairan beracun berwarna biru dan hitam, dengan pH serendah 4.8 — sangat asam dan berbahaya bagi semua makhluk hidup.
+        </p>
+        <!-- Ubah poin-poin di sini -->
+        <ul class="pt-list">
+          <li>
+            <div class="pt-list-ico" style="background:rgba(240,64,64,.12)"><i class="ph ph-factory"></i></div>
+            <span>Lebih dari 2.000 pabrik membuang limbah langsung tanpa pengolahan</span>
+          </li>
+          <li>
+            <div class="pt-list-ico" style="background:rgba(245,166,35,.12)"><i class="ph ph-warning"></i></div>
+            <span>pH air turun ke 4.8 — jauh di bawah ambang aman ekosistem ikan (6–8)</span>
+          </li>
+          <li>
+            <div class="pt-list-ico" style="background:rgba(29,214,138,.12)"><i class="ph ph-plant"></i></div>
+            <span>Program pemulihan sudah berjalan tapi butuh partisipasi komunitas lebih luas</span>
+          </li>
+        </ul>
+        <div>
+          <a href="map.html" class="pt-btn"><i class="bi bi-map-fill"></i> Lihat di Peta</a>
+          <a href="#" class="pt-btn pt-btn-ghost"><i class="bi bi-book"></i> Selengkapnya</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="edu-divider"></div>
+
+<!-- ════════════════════════════════════════
+     SECTION FOTO + TEKS — BLOK 2
+     Foto di kanan, teks di kiri (reverse)
+════════════════════════════════════════ -->
+<section class="photo-text-section edu-section">
+  <div class="edu-wrap">
+    <!-- Tambah class "reverse" untuk flip: foto kanan, teks kiri -->
+    <div class="photo-text-row reverse reveal">
+
+      <div class="pt-photo-wrap reveal reveal-d2">
+        <div class="pt-photo">
+          <!-- GANTI INI DENGAN FOTO ASLI:
+               <img src="assets/foto-mikroplastik.jpg" alt="Mikroplastik di sungai"> -->
+          <div class="pt-photo-placeholder" style="background:linear-gradient(135deg,#05101e,#0a2030)">
+            <img src="assets/images/mikroplastik.jpeg" alt="">
+          </div>
+        </div>
+        <div class="pt-photo-badge">
+          <div class="pt-badge-dot" style="background:var(--amber)"></div>
+          <div>
+            <div class="pt-badge-text">Ancaman Tersembunyi</div>
+            <div class="pt-badge-sub">4.200+ partikel / liter air</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pt-content reveal">
+        <div class="pt-number">// 02 — BAHAYA</div>
+        <h2 class="pt-title">Mikroplastik:<br>Ancaman yang <span class="accent">Tidak Terlihat</span></h2>
+        <p class="pt-body">
+          Plastik yang kita buang tidak benar-benar menghilang. Ia hancur menjadi partikel mikroskopis yang menyebar ke seluruh ekosistem sungai dan laut, lalu masuk ke tubuh ikan, dan akhirnya ke makanan kita.
+        </p>
+        <ul class="pt-list">
+          <li>
+            <div class="pt-list-ico" style="background:rgba(96,176,240,.12)"><i class="ph ph-drop"></i></div>
+            <span>Ditemukan di 90% sampel air sungai perkotaan Indonesia</span>
+          </li>
+          <li>
+            <div class="pt-list-ico" style="background:rgba(245,166,35,.12)"><i class="ph ph-fish"></i></div>
+            <span>Ikan yang mengonsumsi mikroplastik berpotensi dikonsumsi manusia</span>
+          </li>
+          <li>
+            <div class="pt-list-ico" style="background:rgba(167,139,250,.12)"><i class="ph ph-dna"></i></div>
+            <span>Riset menunjukkan korelasi dengan gangguan hormon dan sistem imun</span>
+          </li>
+        </ul>
+        <div>
+          <a href="#articles" class="pt-btn"><i class="bi bi-newspaper"></i> Baca Artikel</a>
+          <a href="#quiz" class="pt-btn pt-btn-ghost"><i class="bi bi-patch-question"></i> Ikut Quiz</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="edu-divider"></div>
+
+<!-- ════════════════════════════════════════
+     BEFORE / AFTER SLIDER
+════════════════════════════════════════ -->
+<section class="edu-section" id="beforeAfter">
+  <div class="edu-wrap">
+    <div class="reveal" style="margin-bottom:32px">
+      <div class="edu-tag">Perbandingan Visual</div>
+      <h2 class="edu-title">Sungai Sebelum & Sesudah <em>Aksi Bersih</em></h2>
+      <p class="edu-sub">Geser handle di tengah gambar ke kiri atau kanan untuk melihat perbedaan nyata kondisi sungai.</p>
+    </div>
+    <div class="ba-wrap reveal reveal-d1">
+      <div class="ba-header">
+        <div class="ba-title" id="baTitle">Sungai Ciliwung, Jakarta</div>
+        <div class="ba-hint"><i class="bi bi-arrow-left-right"></i> Geser untuk membandingkan</div>
+      </div>
+      <!-- Slider area -->
+      <div class="ba-slider" id="baSlider">
+        <!-- BEFORE (kotor) -->
+        <div class="ba-before" id="baBefore">
+          <!-- Ubah konten before di sini -->
+          <img src="assets/images/before-after/before-ciliwung.jpeg" alt="#" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;">
+          <div class="ba-overlay-text" style="color:rgba(255,100,100,.6)">Tercemar Berat — 2019</div>
+        </div>
+        <!-- AFTER (bersih) — clip dari kiri -->
+        <div class="ba-after-clip" id="baAfterClip">
+          <div class="ba-after-inner" id="baAfterInner" style="background:linear-gradient(135deg,#041a0e,#0a3520)">
+            <img src="assets/images/before-after/after-ciliwung.jpeg" alt="#" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;">
+          </div>
+        </div>
+        <!-- Garis tengah -->
+        <div class="ba-line" id="baLine"></div>
+        <!-- Handle -->
+        <div class="ba-handle" id="baHandle">
+          <svg width="16" height="16" viewBox="0 0 16 16"><path d="M5 2L2 8L5 14M11 2L14 8L11 14" stroke="#333" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <!-- Label -->
+        <div class="ba-lbl ba-lbl-before">Sesudah</div>
+        <div class="ba-lbl ba-lbl-after">Sebelum</div>
+      </div>
+      <!-- Pilihan foto / lokasi sungai
+           Tambahkan lebih banyak thumb sesuai foto yang kamu punya -->
+      <div class="ba-thumbs" id="baThumbs">
+        <div class="ba-thumb on" data-title="Sungai Ciliwung, Jakarta" data-before-img="assets/images/before-after/before-ciliwung.jpeg" data-after-img="assets/images/before-after/after-ciliwung.jpeg" data-before-color="linear-gradient(135deg,#1a0505,#3a1010)" data-after-color="linear-gradient(135deg,#041a0e,#0a3520)" data-before-icon="🗑️" data-after-icon="🌊" style="background:linear-gradient(135deg,#1a0505,#3a1010)"><i class="ph ph-trash"></i></div>
+        <div class="ba-thumb" data-title="Kali Malang, Bekasi" data-before-img="assets/images/before-after/before.jpg" data-after-img="assets/images/before-after/after.jpg" data-before-color="linear-gradient(135deg,#0a0a1a,#1a1a30)" data-after-color="linear-gradient(135deg,#041a0e,#0a3520)" data-before-icon="🏭" data-after-icon="🐟" style="background:linear-gradient(135deg,#0a0a1a,#1a1a30)"><i class="ph ph-factory"></i></div>
+        <div class="ba-thumb" data-title="Sungai Code, Yogyakarta" data-before-img="assets/images/before-after/before.jpg" data-after-img="assets/images/before-after/after.jpg" data-before-color="linear-gradient(135deg,#1a1005,#302010)" data-after-color="linear-gradient(135deg,#041808,#083018)" data-before-icon="🍂" data-after-icon="🌿" style="background:linear-gradient(135deg,#1a1005,#302010)"><i class="ph ph-leaf"></i></div>
+        <div class="ba-thumb" data-title="Tukad Badung, Bali" data-before-img="assets/images/before-after/before.jpg" data-after-img="assets/images/before-after/after.jpg" data-before-color="linear-gradient(135deg,#0a0510,#1a0a1e)" data-after-color="linear-gradient(135deg,#04141a,#0a2028)" data-before-icon="⚠️" data-after-icon="💧" style="background:linear-gradient(135deg,#0a0510,#1a0a1e)"><i class="ph ph-warning"></i></div>
+        <div class="ba-thumb" data-title="Sungai Musi, Palembang" data-before-img="assets/images/before-after/before.jpg" data-after-img="assets/images/before-after/after.jpg" data-before-color="linear-gradient(135deg,#100a05,#201508)" data-after-color="linear-gradient(135deg,#041a10,#0a302)" data-before-icon="🗑️" data-after-icon="🌊" style="background:linear-gradient(135deg, #0a0510, #0a0510)"><i class="ph ph-plant"></i></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="edu-divider"></div>
+
+<!-- ════════════════════════════════════════
+     INFOGRAFIS ALUR INTERAKTIF
+════════════════════════════════════════ -->
+<section class="edu-section">
+  <div class="edu-wrap">
+    <div class="reveal" style="margin-bottom:36px">
+      <div class="edu-tag">Bagaimana Ini Terjadi?</div>
+      <h2 class="edu-title">Alur Sampah Sampai ke <em>Tubuh Kita</em></h2>
+      <p class="edu-sub">Arahkan kursor ke setiap tahap untuk melihat penjelasan lengkapnya. Klik untuk detail.</p>
+    </div>
+    <!-- Grid 5 tahap alur pencemaran
+         Tambah/kurangi .flow-item sesuai kebutuhan -->
+    <div class="flow-grid reveal reveal-d1">
+
+      <div class="flow-item">
+        <div class="flow-ico" style="background:rgba(240,64,64,.1);border-color:rgba(240,64,64,.25)"><i class="ph ph-trash-simple"></i></div>
+        <div class="flow-lbl">Sampah<br>Dibuang</div>
+        <div class="flow-detail">
+          <div class="flow-detail-title">Sumber Sampah</div>
+          Plastik, styrofoam, dan limbah rumah tangga dibuang sembarangan di tanah, selokan, dan bantaran sungai setiap harinya.
+        </div>
+      </div>
+
+      <div class="flow-item">
+        <div class="flow-ico" style="background:rgba(96,176,240,.1);border-color:rgba(96,176,240,.25)"><i class="ph ph-cloud-rain"></i></div>
+        <div class="flow-lbl">Hujan<br>Membawa</div>
+        <div class="flow-detail">
+          <div class="flow-detail-title">Peran Hujan</div>
+          Air hujan mengalirkan seluruh sampah dari daratan menuju saluran air, selokan, dan akhirnya masuk ke sungai.
+        </div>
+      </div>
+
+      <div class="flow-item">
+        <div class="flow-ico" style="background:rgba(245,166,35,.1);border-color:rgba(245,166,35,.25)"><i class="ph ph-drop-half-bottom"></i></div>
+        <div class="flow-lbl">Sungai<br>Tercemar</div>
+        <div class="flow-detail">
+          <div class="flow-detail-title">Dampak ke Sungai</div>
+          Ekosistem sungai rusak, ikan mati, pH air turun (menjadi asam), dan air berubah warna menjadi hitam/coklat.
+        </div>
+      </div>
+
+      <div class="flow-item">
+        <div class="flow-ico" style="background:rgba(29,100,214,.1);border-color:rgba(29,100,214,.25)"><i class="ph ph-waves"></i></div>
+        <div class="flow-lbl">Ke Laut<br>& Tanah</div>
+        <div class="flow-detail">
+          <div class="flow-detail-title">Penyebaran Lebih Luas</div>
+          Mikroplastik menyebar ke laut mencemari ekosistem laut, dan meresap ke tanah mencemari air tanah yang kita minum.
+        </div>
+      </div>
+
+      <div class="flow-item">
+        <div class="flow-ico" style="background:rgba(240,64,64,.1);border-color:rgba(240,64,64,.25)"><i class="ph ph-user"></i></div>
+        <div class="flow-lbl">Dampak<br>ke Manusia</div>
+        <div class="flow-detail">
+          <div class="flow-detail-title">Bahaya bagi Tubuh</div>
+          Penyakit kulit, diare, gangguan hormon, gangguan pernapasan, dan risiko kanker jangka panjang akibat paparan polutan.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="edu-divider"></div>
+
+<!-- ════════════════════════════════════════
+     KALKULATOR DAMPAK SAMPAH
+════════════════════════════════════════ -->
+<section class="edu-section" id="calculator">
+  <div class="edu-wrap">
+    <div class="reveal" style="margin-bottom:32px">
+      <div class="edu-tag">Hitung Dampakmu</div>
+      <h2 class="edu-title">Kalkulator <em>Kontribusi Sampah</em> Plastik</h2>
+      <p class="edu-sub">Masukkan kebiasaan harianmu dan lihat berapa besar dampak sampah plastikmu terhadap sungai dalam setahun.</p>
+    </div>
+    <div class="calc-wrap reveal reveal-d1">
+      <div class="calc-header">
+        <div class="calc-header-ico"><img src="assets/icons/riverwatch.jpg" alt="#"></div>
+        <div>
+          <div style="font-size:14px;font-weight:700;color:#fff">Kalkulator Dampak Plastik</div>
+          <div style="font-size:11px;color:var(--muted)">Geser slider sesuai kebiasaan harianmu</div>
+        </div>
+      </div>
+      <div class="calc-body">
+        <!-- INPUT SLIDER — tambah/kurangi .calc-row sesuai kebutuhan -->
+        <div class="calc-inputs">
+          <div class="calc-row">
+            <div class="calc-row-head">
+              <label class="calc-row-label"> Botol plastik per hari</label>
+              <span class="calc-row-val" id="valBotol">1 botol</span>
+            </div>
+            <!-- min, max, value bisa diubah sesuai kebutuhan -->
+            <input type="range" class="calc-range" id="slBotol" min="0" max="10" step="1" value="1" oninput="hitungDampak()">
+          </div>
+          <div class="calc-row">
+            <div class="calc-row-head">
+              <label class="calc-row-label">Kantong plastik per minggu</label>
+              <span class="calc-row-val" id="valKantong">3 kantong</span>
+            </div>
+            <input type="range" class="calc-range" id="slKantong" min="0" max="20" step="1" value="3" oninput="hitungDampak()">
+          </div>
+          <div class="calc-row">
+            <div class="calc-row-head">
+              <label class="calc-row-label">Bungkus styrofoam per minggu</label>
+              <span class="calc-row-val" id="valStyro">2 bungkus</span>
+            </div>
+            <input type="range" class="calc-range" id="slStyro" min="0" max="14" step="1" value="2" oninput="hitungDampak()">
+          </div>
+          <div class="calc-row">
+            <div class="calc-row-head">
+              <label class="calc-row-label">Puntung rokok per hari</label>
+              <span class="calc-row-val" id="valRokok">0 batang</span>
+            </div>
+            <input type="range" class="calc-range" id="slRokok" min="0" max="30" step="1" value="0" oninput="hitungDampak()">
+          </div>
+        </div>
+        <!-- HASIL KALKULASI -->
+        <div class="calc-result">
+          <div class="calc-result-title">Estimasi Dampak Tahunan</div>
+          <div class="calc-result-item">
+            <span class="calc-result-key">Total sampah plastik</span>
+            <span class="calc-result-val" id="resTotalKg">—</span>
+          </div>
+          <div class="calc-result-item">
+            <span class="calc-result-key">Potensi masuk ke sungai</span>
+            <span class="calc-result-val" id="resSungai">—</span>
+          </div>
+          <div class="calc-result-item">
+            <span class="calc-result-key">Mikroplastik dihasilkan</span>
+            <span class="calc-result-val" id="resMikro">—</span>
+          </div>
+          <div class="calc-result-item">
+            <span class="calc-result-key">Setara botol sungai</span>
+            <span class="calc-result-val" id="resBotolEq">—</span>
+          </div>
+          <!-- Status dinamis -->
+          <div class="calc-status" id="calcStatus">
+            <i class="bi bi-hourglass"></i>
+            Geser slider untuk melihat hasil...
+          </div>
+        </div>
+      </div>
+      <div class="calc-submit-row">
+        <button class="calc-btn" onclick="hitungDampak()">
+          <i class="bi bi-calculator-fill"></i>
+          Hitung Dampak Saya
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="edu-divider"></div>
+
+<!-- ════════════════════════════════════════
+     GRID ARTIKEL + FILTER + SEARCH
+════════════════════════════════════════ -->
+<section class="edu-section" id="articles">
+  <div class="edu-wrap">
+    <div class="reveal" style="margin-bottom:28px">
+      <div class="edu-tag">Baca & Pelajari</div>
+      <h2 class="edu-title">Artikel & Edukasi <em>Terbaru</em></h2>
+    </div>
+    <!-- Filter + Search -->
+    <div class="art-filter-row reveal">
+      <button class="art-filter-btn on" onclick="filterArtikel('semua', this)">Semua</button>
+      <button class="art-filter-btn" onclick="filterArtikel('env', this)">Pencemaran</button>
+      <button class="art-filter-btn" onclick="filterArtikel('tech', this)">Teknologi</button>
+      <button class="art-filter-btn" onclick="filterArtikel('tips', this)">Tips</button>
+      <button class="art-filter-btn" onclick="filterArtikel('comm', this)">Komunitas</button>
+      <div class="art-search">
+        <i class="bi bi-search"></i>
+        <input type="text" placeholder="Cari artikel..." oninput="searchArtikel(this.value)" />
+      </div>
+    </div>
+    <!-- Grid artikel
+         Tambah .art-card sesuai kebutuhan
+         data-kategori harus cocok dengan filter btn -->
+    <div class="art-grid" id="artGrid">
+
+      <div class="art-card reveal" data-kategori="env">
+        <div class="art-card-img art-img-env">
+          <span class="art-card-cat cat-env">Pencemaran Air</span>
+          <img src="assets/images/mikroplastik.jpg" alt="">
+        </div>
+        <div class="art-card-body">
+          <!-- Ubah judul artikel di sini -->
+          <div class="art-card-title">Bahaya Mikroplastik bagi Ekosistem Sungai dan Kehidupan Laut Indonesia</div>
+          <div class="art-card-meta">
+            <span class="art-card-date"><i class="bi bi-calendar3"></i> 18 Jan 2025</span>
+            <a href="#" class="art-card-read">Baca <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="art-card reveal reveal-d1" data-kategori="tech">
+        <div class="art-card-img art-img-tech">
+          <span class="art-card-cat cat-tech">Teknologi Hijau</span>
+          <span class="art-card-new">Baru</span>
+          <img src="assets/images/sistem-lot.jpeg" alt="">
+        </div>
+        <div class="art-card-body">
+          <div class="art-card-title">Sensor IoT Murah untuk Pemantauan Kualitas Air Sungai Secara Real-time</div>
+          <div class="art-card-meta">
+            <span class="art-card-date"><i class="bi bi-calendar3"></i> 15 Jan 2025</span>
+            <a href="#" class="art-card-read">Baca <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="art-card reveal reveal-d2" data-kategori="tips">
+        <div class="art-card-img art-img-tips">
+          <span class="art-card-cat cat-tips">Tips Sehari-hari</span>
+          <img src="assets/images/sungai.jpg" alt="">
+        </div>
+        <div class="art-card-body">
+          <div class="art-card-title">5 Kebiasaan Sederhana yang Bisa Langsung Menyelamatkan Sungai Kita</div>
+          <div class="art-card-meta">
+            <span class="art-card-date"><i class="bi bi-calendar3"></i> 12 Jan 2025</span>
+            <a href="#" class="art-card-read">Baca <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="art-card reveal" data-kategori="tech">
+        <div class="art-card-img art-img-tech">
+          <span class="art-card-cat cat-tech">Teknologi Hijau</span>
+          <h4><b>COMING SOON</b></h4>
+        </div>
+        <div class="art-card-body">
+          <div class="art-card-title">Cara Kerja Filter Air Alami Berbahan Bambu dan Arang Aktif</div>
+          <div class="art-card-meta">
+            <span class="art-card-date"><i class="bi bi-calendar3"></i> 10 Jan 2025</span>
+            <a href="#" class="art-card-read">Baca <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="art-card reveal reveal-d1" data-kategori="comm">
+        <div class="art-card-img art-img-comm">
+          <span class="art-card-cat cat-comm">Komunitas</span>
+          <span class="art-card-new">Baru</span>
+          <h4><b>COMING SOON</b></h4>
+        </div>
+        <div class="art-card-body">
+          <div class="art-card-title">Kisah Sukses Aksi Bersih Citarum oleh Komunitas Pemuda Gen-Z Bandung</div>
+          <div class="art-card-meta">
+            <span class="art-card-date"><i class="bi bi-calendar3"></i> 8 Jan 2025</span>
+            <a href="#" class="art-card-read">Baca <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="art-card reveal reveal-d2" data-kategori="env">
+        <div class="art-card-img art-img-env">
+          <span class="art-card-cat cat-env">Pencemaran Air</span>
+          <h4><b>COMING SOON</b></h4>
+        </div>
+        <div class="art-card-body">
+          <div class="art-card-title">Memahami pH Sungai: Cara Mengukur dan Mengartikan Hasilnya</div>
+          <div class="art-card-meta">
+            <span class="art-card-date"><i class="bi bi-calendar3"></i> 5 Jan 2025</span>
+            <a href="#" class="art-card-read">Baca <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- Tombol load more -->
+    <button class="art-load-more reveal">
+      <i class="bi bi-plus-circle"></i> Tampilkan Lebih Banyak
+    </button>
+  </div>
+</section>
+
+<div class="edu-divider"></div>
+
+<!-- ════════════════════════════════════════
+     QUIZ INTERAKTIF
+════════════════════════════════════════ -->
+<section class="edu-section" id="quiz">
+  <div class="edu-wrap">
+    <div class="reveal" style="margin-bottom:32px">
+      <div class="edu-tag">Uji Pengetahuanmu</div>
+      <h2 class="edu-title">Quiz Interaktif <em>Kualitas Air</em></h2>
+      <p class="edu-sub">Jawab 5 soal berikut dan dapatkan sertifikat digital gratis jika skor kamu ≥ 70!</p>
+    </div>
+    <div class="quiz-wrap reveal reveal-d1">
+      <div class="quiz-header">
+        <div class="quiz-header-left">
+          <div class="quiz-ico"><img src="assets/icons/riverwacth.png" alt="Quiz Icon"></div>
+          <div>
+            <div class="quiz-header-title">Quiz Lingkungan Sungai</div>
+            <div class="quiz-header-sub" id="quizSubtitle">5 soal · Waktu 10 menit</div>
+          </div>
+        </div>
+        <div class="quiz-timer" id="quizTimer">⏱ 10:00</div>
+      </div>
+      <!-- Progress bar -->
+      <div class="quiz-progress-track">
+        <div class="quiz-progress-fill" id="quizProgressFill" style="width:0%"></div>
+      </div>
+
+      <!-- ══ SOAL-SOAL ══
+           Tambah .quiz-step untuk soal baru
+           Ubah teks soal dan pilihan jawaban di sini
+           data-correct = index jawaban benar (A=0, B=1, C=2, D=3) -->
+      <div class="quiz-body">
+
+        <!-- SOAL 1 -->
+        <div class="quiz-step on" id="q1" data-correct="0">
+          <div class="quiz-q-meta">
+            <span class="quiz-q-num">Soal 01 / 05</span>
+            <span class="quiz-q-diff diff-easy">Mudah</span>
+          </div>
+          <div class="quiz-q-text">Berapakah kisaran pH air sungai yang dianggap sehat dan aman untuk ekosistem ikan?</div>
+          <div class="quiz-options" id="opts1">
+            <div class="quiz-opt" onclick="pilihJawaban(1,0,this)"><div class="quiz-opt-key">A</div> pH 6 – 8 (mendekati netral)</div>
+            <div class="quiz-opt" onclick="pilihJawaban(1,1,this)"><div class="quiz-opt-key">B</div> pH 2 – 4 (sangat asam)</div>
+            <div class="quiz-opt" onclick="pilihJawaban(1,2,this)"><div class="quiz-opt-key">C</div> pH 10 – 12 (sangat basa)</div>
+            <div class="quiz-opt" onclick="pilihJawaban(1,3,this)"><div class="quiz-opt-key">D</div> pH 0 – 1 (ekstrem asam)</div>
+          </div>
+          <!-- Ubah penjelasan jawaban di sini -->
+          <div class="quiz-explanation" id="exp1">
+            <strong>Benar!</strong> Air dengan pH 6–8 dikategorikan netral dan mendukung kehidupan organisme air. Di bawah 6 (asam) atau di atas 8 (basa) mulai berbahaya bagi ikan dan organisme sungai.
+          </div>
+        </div>
+
+        <!-- SOAL 2 -->
+        <div class="quiz-step" id="q2" data-correct="2">
+          <div class="quiz-q-meta">
+            <span class="quiz-q-num">Soal 02 / 05</span>
+            <span class="quiz-q-diff diff-medium">Sedang</span>
+          </div>
+          <div class="quiz-q-text">Apa yang dimaksud dengan mikroplastik dan mengapa berbahaya bagi manusia?</div>
+          <div class="quiz-options" id="opts2">
+            <div class="quiz-opt" onclick="pilihJawaban(2,0,this)"><div class="quiz-opt-key">A</div> Plastik berukuran besar yang mudah terlihat di sungai</div>
+            <div class="quiz-opt" onclick="pilihJawaban(2,1,this)"><div class="quiz-opt-key">B</div> Plastik daur ulang yang ramah lingkungan</div>
+            <div class="quiz-opt" onclick="pilihJawaban(2,2,this)"><div class="quiz-opt-key">C</div> Partikel plastik &lt;5mm yang masuk ke rantai makanan</div>
+            <div class="quiz-opt" onclick="pilihJawaban(2,3,this)"><div class="quiz-opt-key">D</div> Jenis plastik biodegradable yang aman dibuang</div>
+          </div>
+          <div class="quiz-explanation" id="exp2">
+            <strong>Benar!</strong> Mikroplastik adalah partikel plastik berukuran kurang dari 5mm. Berbahaya karena masuk ke rantai makanan melalui ikan dan air minum, berpotensi menyebabkan gangguan hormon dan kerusakan organ.
+          </div>
+        </div>
+
+        <!-- SOAL 3 -->
+        <div class="quiz-step" id="q3" data-correct="1">
+          <div class="quiz-q-meta">
+            <span class="quiz-q-num">Soal 03 / 05</span>
+            <span class="quiz-q-diff diff-medium">Sedang</span>
+          </div>
+          <div class="quiz-q-text">Sungai Citarum di Jawa Barat disebut sebagai salah satu sungai paling tercemar. Apa penyebab utamanya?</div>
+          <div class="quiz-options" id="opts3">
+            <div class="quiz-opt" onclick="pilihJawaban(3,0,this)"><div class="quiz-opt-key">A</div> Bencana alam berulang yang merusak ekosistem sungai</div>
+            <div class="quiz-opt" onclick="pilihJawaban(3,1,this)"><div class="quiz-opt-key">B</div> Limbah pabrik tekstil dan sampah domestik yang tidak diolah</div>
+            <div class="quiz-opt" onclick="pilihJawaban(3,2,this)"><div class="quiz-opt-key">C</div> Perubahan iklim yang meningkatkan suhu air sungai</div>
+            <div class="quiz-opt" onclick="pilihJawaban(3,3,this)"><div class="quiz-opt-key">D</div> Aktivitas pertambangan di hulu sungai Citarum</div>
+          </div>
+          <div class="quiz-explanation" id="exp3">
+            <strong>Benar!</strong> Lebih dari 2.000 pabrik tekstil dan jutaan penduduk membuang limbah langsung ke Citarum tanpa pengolahan, menyebabkan pH air turun drastis dan kandungan logam berat yang tinggi.
+          </div>
+        </div>
+
+        <!-- SOAL 4 -->
+        <div class="quiz-step" id="q4" data-correct="3">
+          <div class="quiz-q-meta">
+            <span class="quiz-q-num">Soal 04 / 05</span>
+            <span class="quiz-q-diff diff-hard">Sulit</span>
+          </div>
+          <div class="quiz-q-text">Dalam konteks pemantauan kualitas air, apa yang diukur oleh parameter "DO" (Dissolved Oxygen)?</div>
+          <div class="quiz-options" id="opts4">
+            <div class="quiz-opt" onclick="pilihJawaban(4,0,this)"><div class="quiz-opt-key">A</div> Tingkat keasaman air (pH)</div>
+            <div class="quiz-opt" onclick="pilihJawaban(4,1,this)"><div class="quiz-opt-key">B</div> Jumlah partikel tersuspensi dalam air</div>
+            <div class="quiz-opt" onclick="pilihJawaban(4,2,this)"><div class="quiz-opt-key">C</div> Konsentrasi logam berat dalam air</div>
+            <div class="quiz-opt" onclick="pilihJawaban(4,3,this)"><div class="quiz-opt-key">D</div> Kadar oksigen terlarut yang dibutuhkan organisme air</div>
+          </div>
+          <div class="quiz-explanation" id="exp4">
+            <strong>Benar!</strong> DO (Dissolved Oxygen) mengukur kadar oksigen yang larut dalam air. Ikan dan organisme air membutuhkan DO minimal 5 mg/L. Sungai tercemar seringkali memiliki DO sangat rendah karena bakteri menguraikan sampah menghabiskan oksigen.
+          </div>
+        </div>
+
+        <!-- SOAL 5 -->
+        <div class="quiz-step" id="q5" data-correct="0">
+          <div class="quiz-q-meta">
+            <span class="quiz-q-num">Soal 05 / 05</span>
+            <span class="quiz-q-diff diff-easy">Mudah</span>
+          </div>
+          <div class="quiz-q-text">Apa langkah paling efektif yang bisa dilakukan setiap individu untuk mengurangi pencemaran sungai dari plastik?</div>
+          <div class="quiz-options" id="opts5">
+            <div class="quiz-opt" onclick="pilihJawaban(5,0,this)"><div class="quiz-opt-key">A</div> Kurangi penggunaan plastik sekali pakai dan pilah sampah</div>
+            <div class="quiz-opt" onclick="pilihJawaban(5,1,this)"><div class="quiz-opt-key">B</div> Hanya membuang sampah ke sungai saat malam hari</div>
+            <div class="quiz-opt" onclick="pilihJawaban(5,2,this)"><div class="quiz-opt-key">C</div> Membakar sampah plastik di tepi sungai</div>
+            <div class="quiz-opt" onclick="pilihJawaban(5,3,this)"><div class="quiz-opt-key">D</div> Membiarkan pemerintah yang menangani masalah sampah</div>
+          </div>
+          <div class="quiz-explanation" id="exp5">
+            <strong>Benar!</strong> Mengurangi pemakaian plastik sekali pakai dan memilah sampah adalah langkah paling efektif dan bisa dilakukan siapa saja mulai hari ini. Setiap tindakan kecil berkontribusi besar terhadap kesehatan sungai kita.
+          </div>
+        </div>
+
+        <!-- HASIL QUIZ -->
+        <div class="quiz-result" id="quizResult">
+          <svg class="quiz-result-ring" viewBox="0 0 100 100" width="100" height="100">
+            <circle cx="50" cy="50" r="42" fill="none" stroke="rgba(29,214,138,.12)" stroke-width="8"/>
+            <circle cx="50" cy="50" r="42" fill="none" id="resultRing"
+              stroke="#1dd68a" stroke-width="8" stroke-linecap="round"
+              stroke-dasharray="0 264" transform="rotate(-90 50 50)"
+              style="transition:stroke-dasharray 1.2s cubic-bezier(.16,1,.3,1)"/>
+            <text x="50" y="45" text-anchor="middle" font-size="18" fill="#fff" font-family="Space Mono" font-weight="700" id="resultAngka">0</text>
+            <text x="50" y="60" text-anchor="middle" font-size="9" fill="#5a9a7a" font-family="Outfit">/ 100</text>
+          </svg>
+          <div class="quiz-result-title" id="resultTitle">Quiz Selesai!</div>
+          <div class="quiz-result-sub"  id="resultSub">Lihat hasilmu di bawah</div>
+          <div class="quiz-result-stats">
+            <div class="qrs-item"><span class="qrs-num" id="resBenar">0</span><span class="qrs-lbl">Benar</span></div>
+            <div class="qrs-item"><span class="qrs-num" style="color:var(--red)" id="resSalah">0</span><span class="qrs-lbl">Salah</span></div>
+            <div class="qrs-item"><span class="qrs-num" style="color:var(--amber)" id="resWaktu">—</span><span class="qrs-lbl">Waktu</span></div>
+          </div>
+          <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
+            <button class="quiz-btn-next" onclick="resetQuiz()" style="padding:11px 24px">
+              <i class="bi bi-arrow-counterclockwise"></i> Ulangi Quiz
+            </button>
+            <a href="#certificate" class="quiz-btn-next" style="padding:11px 24px;text-decoration:none">
+              <i class="bi bi-award"></i> Ambil Sertifikat
+            </a>
+          </div>
+        </div>
+
+      </div>
+      <!-- Nav soal -->
+      <div class="quiz-nav" id="quizNav">
+        <div class="quiz-dots" id="quizDots"></div>
+        <div class="quiz-nav-btns">
+          <button class="quiz-btn-skip" onclick="lewatiSoal()">Lewati</button>
+          <button class="quiz-btn-next" id="quizNextBtn" onclick="nextSoal()">Selanjutnya →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="edu-divider"></div>
+
+<!-- ════════════════════════════════════════
+     SERTIFIKAT DIGITAL
+════════════════════════════════════════ -->
+<section class="edu-section" id="certificate">
+  <div class="edu-wrap">
+    <div class="reveal" style="margin-bottom:32px">
+      <div class="edu-tag">Penghargaan</div>
+      <h2 class="edu-title">Sertifikat <em>Digital Gratis</em></h2>
+    </div>
+    <div class="cert-row reveal">
+      <!-- Preview sertifikat -->
+      <div class="cert-preview-wrap">
+        <div class="cert-card">
+          <div class="cert-card-ico">🏅</div>
+          <div class="cert-card-title">Sertifikat Edukasi Lingkungan</div>
+          <div class="cert-card-org">RiverWatch · Gen-Z TechPreneur 2025</div>
+          <div class="cert-card-line"></div>
+          <div class="cert-card-name"></div>
+          <div class="cert-card-date">Diberikan kepada peserta yang lulus quiz dengan skor ≥ 70</div>
+          <div class="cert-card-verified"><i class="bi bi-patch-check-fill"></i> Verified by RiverWatch</div>
+        </div>
+      </div>
+      <!-- Info sertifikat -->
+      <div class="reveal reveal-d2">
+        <div class="cert-info-title">Tunjukkan Kepedulianmu!</div>
+        <div class="cert-info-body">
+          Sertifikat digital diberikan kepada setiap peserta yang menyelesaikan quiz dengan skor minimal 70/100. Format PDF berkualitas tinggi, siap untuk di-download, dicetak, dan dibagikan ke media sosial.
+        </div>
+        <!-- Badge achievement -->
+        <div class="cert-badges-row">
+          <div class="cert-badge cb-gold"><i class="ph ph-medal"></i> Quiz Master</div>
+          <div class="cert-badge cb-green">Eco Warrior</div>
+          <div class="cert-badge cb-blue">Water Guardian</div>
+        </div>
+        <div class="cert-actions">
+          <a href="#quiz" class="pt-btn"><i class="bi bi-patch-question-fill"></i> Ikuti Quiz Dulu</a>
+          <button class="pt-btn pt-btn-ghost" onclick="downloadSertifikat()">
+            <i class="bi bi-download"></i> Download PDF
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="edu-divider"></div>
+
+<div id="footer"></div>
+<!-- FAB — Tombol lapor mengambang -->
+<a href="report.html" class="edu-fab" title="Lapor Sekarang">
+  <i class="bi bi-plus-lg"></i>
+</a>
+
+<!-- ═══ CDN JS ═══ -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- ═══ LOAD NAVBAR & FOOTER ═══ -->
+<script src="js/loadNavbar.js"></script>
+<script src="js/footer.js"></script>
+<script src="js/script.js"></script>
+<script src="js/education.js"></script>
+</body>
+</html>
