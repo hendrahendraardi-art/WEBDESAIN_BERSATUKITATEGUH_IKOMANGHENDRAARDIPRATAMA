@@ -1,0 +1,108 @@
+.reveal-text {
+  animation: revealFromSide 1.4s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+.line:nth-child(2) .reveal-text {
+  animation-delay: 0.1s;
+}
+.line:nth-child(3) .reveal-text {
+  animation-delay: 0.2s;
+}
+
+@keyframes revealFromSide {
+  0% {
+    transform: translateX(-110%);
+    filter: blur(10px);
+  }
+  100% {
+    transform: translateX(0);
+    filter: blur(0);
+  }
+}
+
+.js-splash-hidden #splash-screen {
+  display: none !important;
+}
+
+#splash-screen {
+  position: fixed;
+  inset: 0;
+  background: #050505;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  font-family: "Inter", sans-serif;
+}
+
+.line {
+  overflow: hidden;
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+.reveal-text {
+  color: white;
+  font-size: 5rem;
+  font-weight: 900;
+  margin: 0;
+  line-height: 1;
+  transform: translateX(-110%);
+  animation: revealFromSide 1.2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+}
+
+.line:nth-child(2) .reveal-text {
+  animation-delay: 0.2s;
+}
+.line:nth-child(3) .reveal-text {
+  animation-delay: 0.4s;
+}
+
+.accent {
+  color: #00e6a1;
+}
+
+@keyframes revealFromSide {
+  to {
+    transform: translateX(0);
+  }
+}
+
+.bottom-info {
+  margin-top: 30px;
+  opacity: 0;
+  animation: fadeIn 0.5s 1s forwards;
+  color: #444;
+  letter-spacing: 3px;
+  font-size: 12px;
+}
+
+.loader-line {
+  width: 100%;
+  height: 1px;
+  background: #222;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.loader-line::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #00e6a1;
+  animation: growLine 2s 0.5s ease-in-out forwards;
+}
+
+@keyframes growLine {
+  to {
+    width: 100%;
+  }
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}

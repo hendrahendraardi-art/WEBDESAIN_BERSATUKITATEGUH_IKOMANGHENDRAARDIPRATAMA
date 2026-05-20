@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Peta Sungai — RiverWatch</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/map.css" />
+    <link rel="stylesheet" href="css/components/global.css" />
+  </head>
+  <body class="map-page">
+    <div id="navbar"></div>
+    <div class="map-page-header">
+      <div class="map-header-left">
+        <span class="rw-section-tag">Interaktif</span>
+        <h1 class="map-page-title">Peta Sungai Indonesia</h1>
+        <p class="map-page-sub">
+          Klik marker untuk melihat detail kualitas air dan laporan terbaru
+        </p>
+      </div>
+      <div class="map-header-right">
+        <div class="map-stat-pill">
+          <span class="map-stat-dot red"></span
+          ><span id="countKritis">0</span> Kritis
+        </div>
+        <div class="map-stat-pill">
+          <span class="map-stat-dot yellow"></span
+          ><span id="countSedang">0</span> Sedang
+        </div>
+        <div class="map-stat-pill">
+          <span class="map-stat-dot green"></span
+          ><span id="countBaik">0</span> Baik
+        </div>
+        <a href="report.html" class="btn-rw-primary btn-sm-rw">
+          <i class="bi bi-plus-circle-fill"></i> Tambah Laporan
+        </a>
+      </div>
+    </div>
+
+    <div class="map-toolbar">
+      <div class="map-search-wrap">
+        <i class="bi bi-search map-search-icon"></i>
+        <input
+          type="text"
+          class="map-search-input"
+          id="mapSearch"
+          placeholder="Cari nama sungai atau kota..."
+        />
+        <button class="map-search-clear" id="searchClear" style="display: none">
+          <i class="bi bi-x"></i>
+        </button>
+      </div>
+
+      <div class="map-filter-group">
+        <span class="map-filter-label">Status:</span>
+        <button
+          class="map-filter-btn active"
+          data-filter="all"
+          onclick="applyFilter('all', this)"
+        >
+          Semua
+        </button>
+        <button
+          class="map-filter-btn kritis"
+          data-filter="kritis"
+          onclick="applyFilter('kritis', this)"
+        >
+          <i class="bi bi-circle-fill text-danger me-1"></i> Kritis
+        </button>
+        <button
+          class="map-filter-btn sedang"
+          data-filter="sedang"
+          onclick="applyFilter('sedang', this)"
+        >
+          <i class="bi bi-circle-fill text-warning me-1"></i> Sedang
+        </button>
+        <button
+          class="map-filter-btn baik"
+          data-filter="baik"
+          onclick="applyFilter('baik', this)"
+        >
+          <i class="bi bi-circle-fill text-success me-1"></i> Baik
+        </button>
+      </div>
+
+      <div class="map-filter-group">
+        <span class="map-filter-label">Laporan:</span>
+        <button class="map-filter-btn active" onclick="applyTime(7, this)">
+          7 Hari
+        </button>
+        <button class="map-filter-btn" onclick="applyTime(30, this)">
+          30 Hari
+        </button>
+        <button class="map-filter-btn" onclick="applyTime(0, this)">
+          Semua
+        </button>
+      </div>
+
+      <div class="map-toggle-group">
+        <span class="map-filter-label">Layer:</span>
+        <label class="map-toggle">
+          <input
+            type="checkbox"
+            id="toggleHeatmap"
+            onchange="toggleHeatmap(this)"
+          />
+          <span class="map-toggle-slider"></span>
+          <span class="map-toggle-label">Heatmap</span>
+        </label>
+        <label class="map-toggle">
+          <input
+            type="checkbox"
+            id="toggleCluster"
+            checked
+            onchange="toggleCluster(this)"
+          />
+          <span class="map-toggle-slider"></span>
+          <span class="map-toggle-label">Cluster</span>
+        </label>
+      </div>
+    </div>
+
+    <div class="map-workspace">
+      <div class="map-main-wrap" id="mapMainWrap">
+        <div id="mainMap"></div>
+
+        <div class="map-zoom-ctrl">
+          <button onclick="mapZoomIn()" title="Zoom In">
+            <i class="bi bi-plus-lg"></i>
+          </button>
+          <button onclick="mapZoomOut()" title="Zoom Out">
+            <i class="bi bi-dash-lg"></i>
+          </button>
+          <button onclick="mapReset()" title="Reset View">
+            <i class="bi bi-fullscreen"></i>
+          </button>
+        </div>
+
+        <div class="map-legend-overlay">
+          <div class="mlo-title">Keterangan</div>
+          <div class="mlo-item">
+            <span class="mlo-dot" style="background: #f04040"></span>Kritis — pH
+            &lt; 6
+          </div>
+          <div class="mlo-item">
+            <span class="mlo-dot" style="background: #f5a623"></span>Sedang — pH
+            6–7
+          </div>
+          <div class="mlo-item">
+            <span class="mlo-dot" style="background: #1dd68a"></span>Baik — pH
+            &gt; 7
+          </div>
+          <div class="mlo-divider"></div>
+          <div class="mlo-item">
+            <span
+              class="mlo-dot"
+              style="
+                background: rgba(240, 64, 64, 0.4);
+                border-radius: 2px;
+                width: 14px;
+                height: 8px;
+              "
+            ></span
+            >Zona Kritis
+          </div>
+        </div>
+
+        <div class="map-loading" id="mapLoading">
+          <div class="map-loading-inner">
+            <div class="map-loading-spinner"></div>
+            <span>Memuat peta...</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="map-sidebar" id="mapSidebar">
+        <div class="sidebar-empty" id="sidebarEmpty">
+          <div class="sidebar-empty-icon">
+            <img src="assets/icons/map.png" alt="" />
+          </div>
+          <div class="sidebar-empty-title">Pilih sungai di peta</div>
+          <div class="sidebar-empty-sub">
+            Klik marker mana saja untuk melihat detail kualitas air dan laporan
+            terbaru
+          </div>
+          <div class="sidebar-hint-list">
+            <div class="sidebar-hint">
+              <i
+                class="bi bi-hand-index-fill"
+                style="color: var(--rw-mint)"
+              ></i>
+              Klik marker untuk detail
+            </div>
+            <div class="sidebar-hint">
+              <i class="bi bi-zoom-in" style="color: var(--rw-mint)"></i> Scroll
+              untuk zoom peta
+            </div>
+            <div class="sidebar-hint">
+              <i class="bi bi-layers-fill" style="color: var(--rw-mint)"></i>
+              Aktifkan heatmap di toolbar
+            </div>
+          </div>
+        </div>
+
+        <div class="sidebar-detail" id="sidebarDetail" style="display: none">
+          <div class="sd-header">
+            <div class="sd-header-left">
+              <div class="sd-name" id="sdName">—</div>
+              <div class="sd-loc" id="sdLoc">
+                <i class="bi bi-geo-alt-fill"></i> —
+              </div>
+            </div>
+            <div>
+              <span class="sd-badge" id="sdBadge">—</span>
+            </div>
+          </div>
+
+          <div class="sd-metrics">
+            <div class="sd-metric">
+              <div class="sd-metric-icon">
+                <i class="bi bi-droplet-fill text-primary"></i>
+              </div>
+              <div class="sd-metric-val" id="sdPH">—</div>
+              <div class="sd-metric-label">pH Air</div>
+            </div>
+            <div class="sd-metric">
+              <div class="sd-metric-icon">
+                <i class="bi bi-thermometer-half text-danger"></i>
+              </div>
+              <div class="sd-metric-val" id="sdSuhu">—</div>
+              <div class="sd-metric-label">Suhu (°C)</div>
+            </div>
+            <div class="sd-metric">
+              <div class="sd-metric-icon">
+                <i class="bi bi-wind text-info"></i>
+              </div>
+              <div class="sd-metric-val" id="sdOksigen">—</div>
+              <div class="sd-metric-label">O₂ (mg/L)</div>
+            </div>
+            <div class="sd-metric">
+              <div class="sd-metric-icon">
+                <i class="bi bi-trash3-fill text-secondary"></i>
+              </div>
+              <div class="sd-metric-val" id="sdSampah">—</div>
+              <div class="sd-metric-label">Sampah</div>
+            </div>
+          </div>
+
+          <div class="sd-chart-section">
+            <div class="sd-section-title">Tren pH — 7 Hari Terakhir</div>
+            <div class="sd-chart-wrap">
+              <canvas id="sdChart" height="120"></canvas>
+            </div>
+          </div>
+
+          <div class="sd-photos-section">
+            <div class="sd-section-title">Foto Laporan Terbaru</div>
+            <div class="sd-photos" id="sdPhotos"></div>
+          </div>
+
+          <div class="sd-reports-section">
+            <div class="sd-section-title">Laporan Warga</div>
+            <div class="sd-reports" id="sdReports"></div>
+          </div>
+
+          <a href="report.html" class="sd-cta-btn">
+            <i class="bi bi-camera-fill"></i>
+            Laporkan Kondisi Sungai Ini
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="map-infobar">
+      <div class="mib-item">
+        <i class="bi bi-geo-alt-fill" style="color: var(--rw-mint)"></i>
+        <span id="ibTotal">0</span> sungai terpantau
+      </div>
+      <div class="mib-separator"></div>
+      <div class="mib-item">
+        <span class="map-stat-dot red" style="width: 7px; height: 7px"></span>
+        <span id="ibKritis">0</span> kritis
+      </div>
+      <div class="mib-item">
+        <span
+          class="map-stat-dot yellow"
+          style="width: 7px; height: 7px"
+        ></span>
+        <span id="ibSedang">0</span> sedang
+      </div>
+      <div class="mib-item">
+        <span class="map-stat-dot green" style="width: 7px; height: 7px"></span>
+        <span id="ibBaik">0</span> baik
+      </div>
+      <div class="mib-separator"></div>
+      <div class="mib-item">
+        <i class="bi bi-clock" style="color: var(--rw-muted)"></i>
+        Laporan terbaru:
+        <span id="ibLatest" style="color: var(--rw-light)"
+          >Ciliwung, Jakarta — 2 mnt lalu</span
+        >
+      </div>
+      <div class="mib-right">
+        <span style="color: var(--rw-muted); font-size: 11px"
+          >Data simulasi untuk keperluan demo</span
+        >
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+
+    <script src="js/loadNavbar.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/map.js"></script>
+  </body>
+</html>

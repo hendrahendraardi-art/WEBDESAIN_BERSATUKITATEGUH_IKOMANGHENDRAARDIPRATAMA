@@ -1,0 +1,810 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Komunitas — RiverWatch</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="css/community.css" />
+    <link rel="stylesheet" href="css/components/global.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"
+    />
+  </head>
+  <body>
+    <div id="navbar"></div>
+
+    <section class="cm-hero" id="cmHero">
+      <div id="vantaBg"></div>
+      <div class="cm-hero-overlay"></div>
+
+      <div class="cm-hero-content reveal">
+        <div class="cm-hero-badge">
+          <div class="cm-badge-dot"></div>
+          6.291 Relawan Aktif Saat Ini
+        </div>
+        <h1 class="cm-hero-title">
+          Bersama Kita<br /><em>Selamatkan Sungai</em>
+        </h1>
+        <p class="cm-hero-sub">
+          Bergabunglah dengan komunitas relawan muda paling aktif di Indonesia.
+          Laporkan, bersihkan, dan jaga sungai kita bersama.
+        </p>
+        <div class="cm-hero-btns">
+          <button class="cm-btn-primary" onclick="scrollTo('leaderboard')">
+            <i class="bi bi-trophy-fill"></i> Lihat Leaderboard
+          </button>
+          <button class="cm-btn-outline" onclick="scrollTo('events')">
+            <i class="bi bi-calendar-event-fill"></i> Event Terdekat
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <div class="cm-divider"></div>
+
+    <section class="cm-section" id="impact">
+      <div class="cm-wrap">
+        <div class="cm-section-header reveal">
+          <div class="cm-tag">Dampak Komunitas</div>
+          <h2 class="cm-title">Target Kolektif <em>2025</em></h2>
+          <p class="cm-sub">
+            Progress komunitas RiverWatch menuju target tahunan bersama
+          </p>
+        </div>
+        <div class="cm-rings-grid reveal reveal-d1">
+          <div class="cm-ring-item">
+            <div class="cm-ring-wrap">
+              <svg viewBox="0 0 120 120" class="cm-ring-svg">
+                <circle
+                  cx="60"
+                  cy="60"
+                  r="50"
+                  fill="none"
+                  stroke="rgba(29,214,138,.08)"
+                  stroke-width="10"
+                />
+                <circle
+                  cx="60"
+                  cy="60"
+                  r="50"
+                  fill="none"
+                  stroke="#1dd68a"
+                  stroke-width="10"
+                  stroke-linecap="round"
+                  stroke-dasharray="0 314"
+                  transform="rotate(-90 60 60)"
+                  class="ring-fill"
+                  data-pct="72"
+                  style="
+                    transition: stroke-dasharray 1.5s
+                      cubic-bezier(0.16, 1, 0.3, 1);
+                  "
+                />
+              </svg>
+              <div class="cm-ring-center">
+                <span class="cm-ring-num">72%</span>
+              </div>
+            </div>
+            <div class="cm-ring-label">Target Laporan</div>
+            <div class="cm-ring-sub">2.847 / 4.000 laporan</div>
+          </div>
+
+          <div class="cm-ring-item">
+            <div class="cm-ring-wrap">
+              <svg viewBox="0 0 120 120" class="cm-ring-svg">
+                <circle
+                  cx="60"
+                  cy="60"
+                  r="50"
+                  fill="none"
+                  stroke="rgba(96,176,240,.08)"
+                  stroke-width="10"
+                />
+                <circle
+                  cx="60"
+                  cy="60"
+                  r="50"
+                  fill="none"
+                  stroke="#60b0f0"
+                  stroke-width="10"
+                  stroke-linecap="round"
+                  stroke-dasharray="0 314"
+                  transform="rotate(-90 60 60)"
+                  class="ring-fill"
+                  data-pct="56"
+                  style="
+                    transition: stroke-dasharray 1.5s 0.2s
+                      cubic-bezier(0.16, 1, 0.3, 1);
+                  "
+                />
+              </svg>
+              <div class="cm-ring-center">
+                <span class="cm-ring-num" style="color: #60b0f0">56%</span>
+              </div>
+            </div>
+            <div class="cm-ring-label">Target Relawan</div>
+            <div class="cm-ring-sub">6.291 / 11.000 relawan</div>
+          </div>
+
+          <div class="cm-ring-item">
+            <div class="cm-ring-wrap">
+              <svg viewBox="0 0 120 120" class="cm-ring-svg">
+                <circle
+                  cx="60"
+                  cy="60"
+                  r="50"
+                  fill="none"
+                  stroke="rgba(245,166,35,.08)"
+                  stroke-width="10"
+                />
+                <circle
+                  cx="60"
+                  cy="60"
+                  r="50"
+                  fill="none"
+                  stroke="#f5a623"
+                  stroke-width="10"
+                  stroke-linecap="round"
+                  stroke-dasharray="0 314"
+                  transform="rotate(-90 60 60)"
+                  class="ring-fill"
+                  data-pct="48"
+                  style="
+                    transition: stroke-dasharray 1.5s 0.4s
+                      cubic-bezier(0.16, 1, 0.3, 1);
+                  "
+                />
+              </svg>
+              <div class="cm-ring-center">
+                <span class="cm-ring-num" style="color: #f5a623">48%</span>
+              </div>
+            </div>
+            <div class="cm-ring-label">Target Bersih</div>
+            <div class="cm-ring-sub">48 / 100 ton sampah</div>
+          </div>
+
+          <div class="cm-ring-item">
+            <div class="cm-ring-wrap">
+              <svg viewBox="0 0 120 120" class="cm-ring-svg">
+                <circle
+                  cx="60"
+                  cy="60"
+                  r="50"
+                  fill="none"
+                  stroke="rgba(167,139,250,.08)"
+                  stroke-width="10"
+                />
+                <circle
+                  cx="60"
+                  cy="60"
+                  r="50"
+                  fill="none"
+                  stroke="#a78bfa"
+                  stroke-width="10"
+                  stroke-linecap="round"
+                  stroke-dasharray="0 314"
+                  transform="rotate(-90 60 60)"
+                  class="ring-fill"
+                  data-pct="88"
+                  style="
+                    transition: stroke-dasharray 1.5s 0.6s
+                      cubic-bezier(0.16, 1, 0.3, 1);
+                  "
+                />
+              </svg>
+              <div class="cm-ring-center">
+                <span class="cm-ring-num" style="color: #a78bfa">88%</span>
+              </div>
+            </div>
+            <div class="cm-ring-label">Target Event</div>
+            <div class="cm-ring-sub">44 / 50 event bersih</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="cm-divider"></div>
+
+    <section class="cm-section" id="leaderboard">
+      <div class="cm-wrap">
+        <div class="cm-section-header reveal">
+          <div class="cm-tag">Hall of Fame</div>
+          <h2 class="cm-title">Leaderboard <em>Relawan</em></h2>
+          <p class="cm-sub">
+            Relawan paling aktif berdasarkan poin kontribusi. Kamu bisa
+            menggeser posisinya!
+          </p>
+        </div>
+
+        <div class="cm-podium reveal reveal-d1">
+          <div class="cm-podium-item rank2">
+            <div
+              class="cm-podium-avatar"
+              style="background: linear-gradient(135deg, #94a3b8, #cbd5e1)"
+            >
+              <span>SM</span>
+              <div class="cm-podium-crown"></div>
+            </div>
+            <div class="cm-podium-name">Siti Maharani</div>
+            <div class="cm-podium-loc">
+              <i class="bi bi-geo-alt-fill"></i> Surabaya
+            </div>
+            <div class="cm-podium-pts">4.820 pts</div>
+            <div class="cm-podium-base rank2-base">
+              <div class="cm-podium-rank-num">#2</div>
+            </div>
+          </div>
+
+          <div class="cm-podium-item rank1">
+            <div class="cm-podium-glow"></div>
+            <div
+              class="cm-podium-avatar"
+              style="background: linear-gradient(135deg, #fbbf24, #f59e0b)"
+            >
+              <span>AR</span>
+              <div class="cm-podium-crown"></div>
+            </div>
+            <div class="cm-podium-name">Andi Rahmawan</div>
+            <div class="cm-podium-loc">
+              <i class="bi bi-geo-alt-fill"></i> Jakarta
+            </div>
+            <div class="cm-podium-pts">6.240 pts</div>
+            <div class="cm-podium-base rank1-base">
+              <div class="cm-podium-rank-num">#1</div>
+            </div>
+          </div>
+
+          <div class="cm-podium-item rank3">
+            <div
+              class="cm-podium-avatar"
+              style="background: linear-gradient(135deg, #ea580c, #fb923c)"
+            >
+              <span>DK</span>
+              <div class="cm-podium-crown"></div>
+            </div>
+            <div class="cm-podium-name">Dewa Kusuma</div>
+            <div class="cm-podium-loc">
+              <i class="bi bi-geo-alt-fill"></i> Denpasar
+            </div>
+            <div class="cm-podium-pts">3.960 pts</div>
+            <div class="cm-podium-base rank3-base">
+              <div class="cm-podium-rank-num">#3</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cm-lb-table reveal reveal-d2">
+          <div class="cm-lb-header">
+            <span>Rank</span>
+            <span>Relawan</span>
+            <span class="hide-sm">Level</span>
+            <span class="hide-sm">Laporan</span>
+            <span>Poin</span>
+            <span>Streak</span>
+          </div>
+          <div id="lbRows"></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="cm-divider"></div>
+
+    <section class="cm-section" id="achievements">
+      <div class="cm-wrap">
+        <div class="cm-section-header reveal">
+          <div class="cm-tag">Sistem Pencapaian</div>
+          <h2 class="cm-title">Badge & <em>Achievement</em></h2>
+          <p class="cm-sub">
+            Kumpulkan badge dengan berkontribusi aktif. Hover badge untuk lihat
+            cara mendapatkannya.
+          </p>
+        </div>
+
+        <div class="cm-badges-grid reveal reveal-d1">
+          <div class="cm-badge-card unlocked">
+            <div
+              class="cm-badge-ico"
+              style="background: linear-gradient(135deg, #fbbf24, #f59e0b)"
+            >
+              <img src="assets/icons/trophy.png" alt="" />
+            </div>
+            <div class="cm-badge-name">Pahlawan Sungai</div>
+            <div class="cm-badge-desc">50+ laporan terverifikasi</div>
+            <div class="cm-badge-progress">
+              <div
+                class="cm-badge-bar"
+                style="width: 100%; background: #fbbf24"
+              ></div>
+            </div>
+            <div class="cm-badge-holders">2.841 relawan</div>
+            <div class="cm-badge-tooltip">
+              <strong>Cara dapat:</strong> Kirimkan dan verifikasi 50 laporan
+              kondisi sungai. Badge ini diraih oleh relawan paling aktif.
+            </div>
+          </div>
+
+          <div class="cm-badge-card unlocked">
+            <div
+              class="cm-badge-ico"
+              style="background: linear-gradient(135deg, #0ea5e9, #22d3ee)"
+            >
+              <img src="assets/icons/wave.png" alt="" />
+            </div>
+            <div class="cm-badge-name">Penjaga Air</div>
+            <div class="cm-badge-desc">10 sungai berbeda dilaporkan</div>
+            <div class="cm-badge-progress">
+              <div
+                class="cm-badge-bar"
+                style="width: 100%; background: #22d3ee"
+              ></div>
+            </div>
+            <div class="cm-badge-holders">1.204 relawan</div>
+            <div class="cm-badge-tooltip">
+              <strong>Cara dapat:</strong> Laporkan kondisi minimal 10 sungai
+              yang berbeda di seluruh Indonesia.
+            </div>
+          </div>
+
+          <div class="cm-badge-card unlocked">
+            <div
+              class="cm-badge-ico"
+              style="background: linear-gradient(135deg, #10b981, #1dd68a)"
+            >
+              <img src="assets/icons/leaves.png" alt="" />
+            </div>
+            <div class="cm-badge-name">Eco Warrior</div>
+            <div class="cm-badge-desc">Selesaikan semua modul edukasi</div>
+            <div class="cm-badge-progress">
+              <div
+                class="cm-badge-bar"
+                style="width: 100%; background: #1dd68a"
+              ></div>
+            </div>
+            <div class="cm-badge-holders">3.512 relawan</div>
+            <div class="cm-badge-tooltip">
+              <strong>Cara dapat:</strong> Selesaikan seluruh modul edukasi dan
+              raih skor quiz ≥ 70.
+            </div>
+          </div>
+
+          <div class="cm-badge-card unlocked">
+            <div
+              class="cm-badge-ico"
+              style="background: linear-gradient(135deg, #33077e, #1b0268)"
+            >
+              <img src="assets/icons/thunder.png" alt="" />
+            </div>
+            <div class="cm-badge-name">Streak Master</div>
+            <div class="cm-badge-desc">30 hari laporan berturut-turut</div>
+            <div class="cm-badge-progress">
+              <div
+                class="cm-badge-bar"
+                style="width: 100%; background: #a78bfa"
+              ></div>
+            </div>
+            <div class="cm-badge-holders">412 relawan</div>
+            <div class="cm-badge-tooltip">
+              <strong>Cara dapat:</strong> Kirimkan laporan selama 30 hari
+              berturut-turut tanpa jeda.
+            </div>
+          </div>
+
+          <div class="cm-badge-card locked">
+            <div
+              class="cm-badge-ico locked-ico"
+              style="background: rgba(29, 214, 138, 0.08)"
+            >
+              <img
+                src="assets/icons/microscope.png"
+                style="filter: grayscale(100%)"
+                alt=""
+              />
+            </div>
+            <div class="cm-badge-name">Analis Senior</div>
+            <div class="cm-badge-desc">
+              100 laporan dengan foto terverifikasi
+            </div>
+            <div class="cm-badge-progress">
+              <div
+                class="cm-badge-bar"
+                style="width: 68%; background: #1dd68a"
+              ></div>
+            </div>
+            <div class="cm-badge-progress-lbl">68 / 100</div>
+            <div class="cm-badge-tooltip">
+              <strong>Cara dapat:</strong> Kirimkan 100 laporan yang disertai
+              foto dan berhasil diverifikasi tim.
+            </div>
+          </div>
+
+          <div class="cm-badge-card locked">
+            <div
+              class="cm-badge-ico locked-ico"
+              style="background: rgba(29, 214, 138, 0.08)"
+            >
+              <img
+                src="assets/icons/treasure-map.png"
+                style="filter: grayscale(100%)"
+                alt=""
+              />
+            </div>
+            <div class="cm-badge-name">Explorer</div>
+            <div class="cm-badge-desc">Laporan dari 5 provinsi berbeda</div>
+            <div class="cm-badge-progress">
+              <div
+                class="cm-badge-bar"
+                style="width: 40%; background: #f5a623"
+              ></div>
+            </div>
+            <div class="cm-badge-progress-lbl">2 / 5 provinsi</div>
+            <div class="cm-badge-tooltip">
+              <strong>Cara dapat:</strong> Laporkan kondisi sungai dari minimal
+              5 provinsi berbeda di Indonesia.
+            </div>
+          </div>
+
+          <div class="cm-badge-card locked">
+            <div
+              class="cm-badge-ico locked-ico"
+              style="background: rgba(29, 214, 138, 0.08)"
+            >
+              <img
+                src="assets/icons/hand-shake.png"
+                style="filter: grayscale(100%)"
+                alt=""
+              />
+            </div>
+            <div class="cm-badge-name">Community Leader</div>
+            <div class="cm-badge-desc">Rekrut 10 relawan baru</div>
+            <div class="cm-badge-progress">
+              <div
+                class="cm-badge-bar"
+                style="width: 20%; background: #f04040"
+              ></div>
+            </div>
+            <div class="cm-badge-progress-lbl">2 / 10 relawan</div>
+            <div class="cm-badge-tooltip">
+              <strong>Cara dapat:</strong> Ajak 10 orang baru bergabung menjadi
+              relawan aktif menggunakan kode referralmu.
+            </div>
+          </div>
+
+          <div class="cm-badge-card locked">
+            <div
+              class="cm-badge-ico locked-ico"
+              style="background: rgba(29, 214, 138, 0.08)"
+            >
+              <img
+                src="assets/icons/crown (1).png"
+                style="filter: grayscale(100%)"
+                alt="#"
+              />
+            </div>
+            <div class="cm-badge-name">River Legend</div>
+            <div class="cm-badge-desc">Capai rank #1 leaderboard nasional</div>
+            <div class="cm-badge-progress">
+              <div
+                class="cm-badge-bar"
+                style="width: 12%; background: #fbbf24"
+              ></div>
+            </div>
+            <div class="cm-badge-progress-lbl">Rank #9 saat ini</div>
+            <div class="cm-badge-tooltip">
+              <strong>Cara dapat:</strong> Raih posisi #1 di leaderboard
+              nasional dan pertahankan selama 7 hari.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="cm-divider"></div>
+
+    <section class="cm-section">
+      <div class="cm-wrap">
+        <div class="cm-two-col">
+          <div class="reveal">
+            <div class="cm-tag">Real-time</div>
+            <h2 class="cm-title" style="font-size: clamp(20px, 2.5vw, 28px)">
+              Aktivitas <em>Terkini</em>
+            </h2>
+            <p class="cm-sub" style="margin-bottom: 20px">
+              Update otomatis setiap beberapa detik
+            </p>
+
+            <div class="cm-activity-panel">
+              <div class="cm-activity-header">
+                <div class="cm-live-indicator">
+                  <div class="cm-live-dot"></div>
+                  LIVE Feed
+                </div>
+                <span id="actCount" style="font-size: 11px; color: var(--muted)"
+                  >0 aktivitas hari ini</span
+                >
+              </div>
+              <div class="cm-activity-list" id="activityList"></div>
+            </div>
+          </div>
+
+          <div class="reveal reveal-d2">
+            <div class="cm-tag">Undang Teman</div>
+            <h2 class="cm-title" style="font-size: clamp(20px, 2.5vw, 28px)">
+              Kode <em>Referral</em>
+            </h2>
+            <p class="cm-sub" style="margin-bottom: 20px">
+              Ajak teman bergabung dan dapatkan poin bonus!
+            </p>
+
+            <div class="cm-referral-card">
+              <div class="cm-ref-code-wrap">
+                <div class="cm-ref-label">Kode Referralmu</div>
+                <div class="cm-ref-code" id="refCode">RW-HERO-2026</div>
+                <button class="cm-ref-copy" onclick="copyRef()">
+                  <i class="bi bi-copy"></i> Salin
+                </button>
+              </div>
+              <div class="cm-ref-stats">
+                <div class="cm-ref-stat">
+                  <div class="cm-ref-stat-num">7</div>
+                  <div class="cm-ref-stat-lbl">Teman Diundang</div>
+                </div>
+                <div class="cm-ref-stat">
+                  <div class="cm-ref-stat-num">+350</div>
+                  <div class="cm-ref-stat-lbl">Poin Bonus</div>
+                </div>
+                <div class="cm-ref-stat">
+                  <div class="cm-ref-stat-num">3</div>
+                  <div class="cm-ref-stat-lbl">Bulan Aktif</div>
+                </div>
+              </div>
+              <div class="cm-share-label">Bagikan via</div>
+              <div class="cm-share-row">
+                <button
+                  class="cm-share-btn"
+                  style="
+                    background: rgba(37, 211, 102, 0.15);
+                    color: #25d366;
+                    border-color: rgba(37, 211, 102, 0.25);
+                  "
+                  onclick="share('whatsapp')"
+                >
+                  <i class="bi bi-whatsapp"></i> WhatsApp
+                </button>
+                <button
+                  class="cm-share-btn"
+                  style="
+                    background: rgba(96, 176, 240, 0.1);
+                    color: #1da1f2;
+                    border-color: rgba(96, 176, 240, 0.25);
+                  "
+                  onclick="share('twitter')"
+                >
+                  <i class="bi bi-twitter-x"></i> Twitter
+                </button>
+                <button
+                  class="cm-share-btn"
+                  style="
+                    background: rgba(167, 139, 250, 0.1);
+                    color: #a78bfa;
+                    border-color: rgba(167, 139, 250, 0.25);
+                  "
+                  onclick="share('instagram')"
+                >
+                  <i class="bi bi-instagram"></i> Instagram
+                </button>
+              </div>
+              <div class="cm-ref-progress">
+                <div class="cm-ref-prog-head">
+                  <span>Menuju badge Community Leader</span>
+                  <span style="color: var(--mint)">7 / 10</span>
+                </div>
+                <div class="cm-ref-prog-track">
+                  <div class="cm-ref-prog-fill" style="width: 70%"></div>
+                </div>
+                <div
+                  style="font-size: 10px; color: var(--dim); margin-top: 4px"
+                >
+                  3 orang lagi untuk dapat badge
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="cm-divider"></div>
+
+    <section class="cm-section" id="events">
+      <div class="cm-wrap">
+        <div class="cm-section-header reveal">
+          <div class="cm-tag">Aksi Nyata</div>
+          <h2 class="cm-title">Event & Aksi <em>Bersih Sungai</em></h2>
+          <p class="cm-sub">
+            Bergabung di event aksi bersih terdekat di kotamu. Dapatkan poin &
+            badge eksklusif!
+          </p>
+        </div>
+
+        <div class="cm-event-filters reveal reveal-d1">
+          <button class="cm-ef-btn on" onclick="filterEvent('semua', this)">
+            Semua
+          </button>
+          <button class="cm-ef-btn" onclick="filterEvent('jakarta', this)">
+            Jakarta
+          </button>
+          <button class="cm-ef-btn" onclick="filterEvent('bandung', this)">
+            Bandung
+          </button>
+          <button class="cm-ef-btn" onclick="filterEvent('surabaya', this)">
+            Surabaya
+          </button>
+          <button class="cm-ef-btn" onclick="filterEvent('bali', this)">
+            Bali
+          </button>
+          <button class="cm-ef-btn" onclick="filterEvent('online', this)">
+            Online
+          </button>
+        </div>
+
+        <div class="cm-events-grid" id="eventsGrid"></div>
+      </div>
+    </section>
+
+    <section class="cm-section" id="forum">
+      <div class="cm-wrap">
+        <div class="cm-section-header reveal">
+          <div class="cm-tag">Diskusi</div>
+          <h2 class="cm-title">Forum <em>Komunitas</em></h2>
+          <p class="cm-sub">
+            Diskusikan isu lingkungan, tanya jawab, dan bagikan pengalaman
+            lapanganmu.
+          </p>
+        </div>
+
+        <div class="cm-forum-cats reveal reveal-d1">
+          <div
+            class="cm-fcat"
+            style="
+              border-color: rgba(240, 64, 64, 0.2);
+              background: rgba(240, 64, 64, 0.05);
+            "
+          >
+            <div class="cm-fcat-ico" style="color: #f04040">
+              <i class="bi bi-exclamation-triangle-fill"></i>
+            </div>
+            <div class="cm-fcat-name">Laporan Darurat</div>
+            <div class="cm-fcat-cnt">24 thread</div>
+          </div>
+          <div
+            class="cm-fcat"
+            style="
+              border-color: rgba(29, 214, 138, 0.2);
+              background: rgba(29, 214, 138, 0.05);
+            "
+          >
+            <div class="cm-fcat-ico" style="color: var(--mint)">
+              <i class="bi bi-lightbulb-fill"></i>
+            </div>
+            <div class="cm-fcat-name">Tips & Solusi</div>
+            <div class="cm-fcat-cnt">81 thread</div>
+          </div>
+          <div
+            class="cm-fcat"
+            style="
+              border-color: rgba(96, 176, 240, 0.2);
+              background: rgba(96, 176, 240, 0.05);
+            "
+          >
+            <div class="cm-fcat-ico" style="color: #60b0f0">
+              <i class="bi bi-book-fill"></i>
+            </div>
+            <div class="cm-fcat-name">Edukasi & Riset</div>
+            <div class="cm-fcat-cnt">47 thread</div>
+          </div>
+          <div
+            class="cm-fcat"
+            style="
+              border-color: rgba(167, 139, 250, 0.2);
+              background: rgba(167, 139, 250, 0.05);
+            "
+          >
+            <div class="cm-fcat-ico" style="color: #a78bfa">
+              <i class="bi bi-stars"></i>
+            </div>
+            <div class="cm-fcat-name">Selebrasi & Cerita</div>
+            <div class="cm-fcat-cnt">63 thread</div>
+          </div>
+        </div>
+
+        <div class="cm-forum-threads reveal reveal-d2" id="forumThreads"></div>
+
+        <div
+          style="text-align: center; margin-top: 20px"
+          class="reveal reveal-d3"
+        >
+          <button class="cm-btn-outline">
+            <i class="bi bi-chat-dots-fill"></i> Lihat Semua Thread
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <div class="cm-divider"></div>
+
+    <section class="cm-section cm-section-sm">
+      <div class="cm-wrap">
+        <div class="cm-cta-banner reveal">
+          <div class="cm-cta-left">
+            <h2 class="cm-cta-title">Siap Jadi Pahlawan Sungai?</h2>
+            <p class="cm-cta-sub">
+              Daftar gratis, mulai laporan pertamamu, dan raih badge eksklusif
+              hari ini.
+            </p>
+            <div class="cm-cta-perks">
+              <div class="cm-cta-perk">
+                <i
+                  class="bi bi-check-circle-fill"
+                  style="color: var(--mint)"
+                ></i>
+                Gratis selamanya
+              </div>
+              <div class="cm-cta-perk">
+                <i
+                  class="bi bi-check-circle-fill"
+                  style="color: var(--mint)"
+                ></i>
+                Badge & reward eksklusif
+              </div>
+              <div class="cm-cta-perk">
+                <i
+                  class="bi bi-check-circle-fill"
+                  style="color: var(--mint)"
+                ></i>
+                Bergabung 6.291 relawan aktif
+              </div>
+            </div>
+          </div>
+          <div class="cm-cta-right">
+            <a href="report.html" class="cm-btn-primary cm-btn-large">
+              <i class="bi bi-person-plus-fill"></i> Daftar & Lapor Sekarang
+            </a>
+            <span class="cm-cta-note">Tidak perlu kartu kredit</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="footer"></div>
+
+    <a href="report.html" class="cm-fab" title="Lapor Sekarang">
+      <i class="bi bi-plus-lg"></i>
+    </a>
+
+    <div class="cm-toast" id="toast"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+
+    <script src="js/loadNavbar.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/community.js"></script>
+  </body>
+</html>
